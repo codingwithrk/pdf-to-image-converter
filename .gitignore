@@ -1,0 +1,8 @@
+__pycache__/
+temp.pdf
+*.pyc
+*.pyo
+*.pyd
+.env/
+.idea
+.DS_Store
