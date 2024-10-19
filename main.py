@@ -4,6 +4,8 @@ from pdf2image import convert_from_path
 from PIL import Image
 import io
 
+st.set_page_config(page_title='RK PDF to Image Converter', page_icon='./favicon.png')
+
 # Title of the Streamlit app
 st.title('PDF to Image Converter')
 
@@ -40,3 +42,31 @@ if uploaded_pdf is not None:
                                    data=img_bytes,
                                    file_name=f"page_{i + 1}.png",
                                    mime="image/png")
+
+
+# Footer
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: #f1f1f1;
+        border-top: 1px solid #e1e1e1;
+        font-size: 12px;
+    }
+    a {
+        text-decoration: none;
+        color: #f1f1f1 !important;
+    }
+    </style>
+    <div class="footer">
+        Developed By ❤️ <a href="https://codingwithrk.com/" target="_blank">CodingwithRK</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
