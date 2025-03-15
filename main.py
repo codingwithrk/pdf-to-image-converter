@@ -80,7 +80,7 @@ if uploaded_pdf is not None:
 
                 # Display each page as an image
                 for i, image in enumerate(images):
-                    st.image(image, caption=f"Page {i + 1}", use_column_width=True)
+                    st.image(image, caption=f"Page {i + 1}", use_container_width=True)
 
                 # Option to download each image as PNG
                 if st.button("Download Image(s) as PNG"):
